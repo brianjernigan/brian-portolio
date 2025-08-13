@@ -1,27 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brian Jernigan</title>
-    <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brian R. Jernigan — Portfolio</title>
+  <meta name="description" content="Gameplay Programmer & Software Engineer — Unity (C#), Unreal (C++/Blueprints)." />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root{
+      --bg:#0b0f14; --ink:#e9eef5; --muted:#9fb3c8; --card:#101722; --border:#1d283a; --accent:#8ad4ff;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial; background:var(--bg); color:var(--ink); line-height:1.6}
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:1000px; margin:0 auto; padding:28px 18px}
+    header{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap}
+    .brand{font-weight:700; letter-spacing:.2px}
+    nav a{opacity:.9; margin-left:14px}
+    .hero{margin:40px 0 28px; padding:24px; border:1px solid var(--border); border-radius:14px; background:var(--card)}
+    h1{margin:0 0 6px; font-size:clamp(26px,4vw,40px)}
+    p.lead{margin:0 0 14px; color:var(--muted)}
+    .links{display:flex; gap:12px; flex-wrap:wrap; margin-top:12px}
+    .btn{display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--border); background:#0f172a}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),#5aa8ff); color:#07111b; font-weight:700}
+    section{margin:28px 0}
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .card{padding:16px; border:1px solid var(--border); border-radius:12px; background:var(--card)}
+    .card h3{margin:0 0 6px; font-size:18px}
+    .card p{margin:0; color:var(--muted)}
+    footer{margin:28px 0 6px; color:var(--muted); font-size:14px; text-align:center}
+    @media (max-width:820px){ .grid{grid-template-columns:1fr} header{justify-content:center} nav{width:100%; text-align:center; margin-top:6px} }
+  </style>
 </head>
 <body>
-    <h1>Brian Jernigan</h1>
+  <div class="wrap">
+    <header>
+      <div class="brand">Brian R. Jernigan</div>
+      <nav aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#notes">Dev Notes</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Building systems that feel great to play — and look great in code.</h1>
+        <p class="lead">Gameplay Programmer & Software Engineer • Unity (C#), Unreal (C++/Blueprints), AI, input, UI, optimization. I’m launching new original projects & videos here.</p>
+        <div class="links">
+          <!-- replace these hrefs with your real links -->
+          <a class="btn primary" href="/Brian_Jernigan_Resume.pdf" target="_blank" rel="noopener">Download Résumé</a>
+          <a class="btn" href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.youtube.com/@CHANNEL" target="_blank" rel="noopener">YouTube</a>
+          <a class="btn" href="mailto:brobertjernigan@gmail.com">Email</a>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects (coming soon)</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Gameplay Controller Suite</h3>
+            <p>Polished kinematic controller with slopes, steps, coyote time, ledge grabs, and gamepad support.</p>
+          </div>
+          <div class="card">
+            <h3>AI Perception & Behaviors</h3>
+            <p>Sight/FOV, LOS, hearing, and modular behavior trees with debug overlays.</p>
+          </div>
+          <div class="card">
+            <h3>Ability / Status Framework</h3>
+            <p>Data-driven abilities, cooldowns, buffs/debuffs, and deterministic loops.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="notes">
+        <h2>Dev Notes</h2>
+        <div class="card">
+          <p>Short write-ups and videos on the problems I solve as I build. First post this week.</p>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="card">
+          <p>Open to gameplay programming roles, software engineering, and contract work.</p>
+          <p>Email: <a href="mailto:brobertjernigan@gmail.com">brobertjernigan@gmail.com</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>© <span id="y"></span> Brian R. Jernigan</footer>
+  </div>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
